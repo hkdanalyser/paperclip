@@ -15,7 +15,8 @@ function resolveServerLogDir(): string {
   return resolveDefaultLogsDir();
 }
 
-const logDir = resolveServerLogDir();
+const logDir = '/tmp/logs';
+
 fs.mkdirSync(logDir, { recursive: true });
 
 const logFile = path.join(logDir, "server.log");
